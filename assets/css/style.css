@@ -42,11 +42,7 @@ textarea {
     text-shadow: none;
 }
 
-@media screen and (max-width: 640px) {
-    #site-title a {
-        font-size: 20px;
-    }
-}
+
 
 /*
  * A better looking default horizontal rule
