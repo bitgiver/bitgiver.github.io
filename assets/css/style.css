@@ -42,6 +42,12 @@ textarea {
     text-shadow: none;
 }
 
+@media screen and (max-width: 640px) {
+    #site-title a {
+        font-size: 20px;
+    }
+}
+
 /*
  * A better looking default horizontal rule
  */
@@ -82,7 +88,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Oswald", sans-serif;
 	font-weight: 300;
+
 }
+
+
 
 /* ==========================================================================
    MENU CONFIGURATION
