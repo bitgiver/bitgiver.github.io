@@ -253,12 +253,13 @@ h1, h2, h3, h4, h5, h6 {
    Wrap Sections
    ========================================================================== */
 
+
 #headerwrap {
 	background: url(../img/back.jpg) no-repeat center top;
 	margin-top: 0px;
 	padding-top:120px;
 	text-align:center;
-	background-attachment: relative;
+	background-attachment: fixed;
 	background-position: center center;
 	min-height: 700px;
 	width: 100%;
