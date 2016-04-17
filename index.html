@@ -1,178 +1,385 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>BitGiver</title>
-<meta charset="utf-8">
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css">
-<!--[if lte IE 8]>
-<script src="js/html5shiv.js"></script>
-<![endif]-->
-<script src="js/jquery.min.js"></script>
-<script src="js/skel.min.js"></script>
-<script src="js/skel-panels.min.js"></script>
-<script src="js/init.js"></script>
-<noscript>
-<link rel="stylesheet" href="css/skel-noscript.css">
-<link rel="stylesheet" href="css/style.css">
-#<link rel="stylesheet" href="css/style-wide.css">
-</noscript>
-<!--[if lte IE 9]>
-<link rel="stylesheet" href="css/ie9.css">
-<![endif]-->
-<!--[if lte IE 8]>
-<link rel="stylesheet" href="css/ie8.css">
-<![endif]-->
-</head>
-<body>
-<div id="header" class="skel-panels-fixed">
-  <div class="top">
-    <div id="logo"> <span class="image avatar48"><img src="images/avatar.jpg" alt=""></span>
-      <h1 id="title">GIVE A BIT</h1>
-      <span class="byline"><strong>JEREMY NEY</strong></span> </div>
-    <nav id="nav">
-      <ul>
-        <li><a href="#top" id="top-link" class="skel-panels-ignoreHref"><span class="icon icon-home">Home</span></a></li>
-        <li><a href="#portfolio" id="portfolio-link" class="skel-panels-ignoreHref"><span class="icon icon-user">Donate</span></a></li>
-        <li><a href="#about" id="about-link" class="skel-panels-ignoreHref"><span class="icon icon-th">How it Works</span></a></li>
-        <li><a href="#FAQ" id="FAQ-link" class="skel-panels-ignoreHref"><span class="icon icon-question">FAQ</span></a><li>
-        <li><a href="#contact" id="contact-link" class="skel-panels-ignoreHref"><span class="icon icon-envelope">Contact</span></a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="bottom">
-    <ul class="icons">
-      <li><a href="https://twitter.com/Give_aBit" class="icon icon-twitter"><span>Twitter</span></a></li>
-      <li><a href="https://www.facebook.com/bitgiver.xyz/?ref=hl" class="icon icon-facebook"><span>Facebook</span></a></li>
-      <li><a href="https://www.linkedin.com/in/jeremy-ney-0b46762b" class="icon icon-linkedin"><span>LinkedIn</span></a></li>
-      <li><a href="https://www.coinbase.com/" class="icon icon-bitcoin"><span>Dribbble</span></a></li>
-      <li><a href="mailto:bitgiver.xyz@gmail.com" class="icon icon-envelope"><span>Email</span></a></li>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>BitGiver</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#home" class="smoothScroll"><font color="orange" >Give a Bit</font></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#home" class="smoothScroll" >Home</a></li>
+      <li><a href="#about" class="smoothScroll">About</a></li> 
+      <li><a href="#portfolio" class="smoothScroll">Donate</a></li> 
+      <li><a href="#services" class="smoothScroll">FAQ</a></li>
+      	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="index.html#home">BitGiver</a></h1>
+			<i class="fa fa-times menu-close"></i>
+			<a href="#home" class="smoothScroll">Home</a>
+			<a href="#about" class="smoothScroll">About</a>
+			<a href="#portfolio" class="smoothScroll">Portfolio</a>
+			<a href="#services" class="smoothScroll">Services</a>
+			<a href="#contact" class="smoothScroll">Contact</a>
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-dribbble"></i></a>
+			<a href="#"><i class="fa fa-envelope"></i></a>
+		</div>
+	
+
+		<!-- Menu button -->
+		<div id="menuToggle"><i class="fa fa-bars"></i></div>
+
+	</nav>
     </ul>
   </div>
-</div>
-<div id="main">
-  <section id="top" class="one">
-    <div class="container small"> <a href="#portfolio" class="image featured"><img src="images/pic01.jpg" style="width:100%" alt=""></a>
-      <header>
-        <h2 class="alt">This is <strong>BitGiver</strong>. A blockchain developed program that will revolutionize charitable giving.</h2>
-      </header>
+</nav>
+
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+		
+	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="index.html#home">BitGiver</a></h1>
+			<i class="fa fa-times menu-close"></i>
+			<a href="#home" class="smoothScroll">Home</a>
+			<a href="#about" class="smoothScroll">About</a>
+			<a href="#portfolio" class="smoothScroll">Portfolio</a>
+			<a href="#services" class="smoothScroll">Services</a>
+			<a href="#contact" class="smoothScroll">Contact</a>
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-dribbble"></i></a>
+			<a href="#"><i class="fa fa-envelope"></i></a>
+		</div>
+	
+
+		<!-- Menu button -->
+		<div id="menuToggle"><i class="fa fa-bars"></i></div>
+
+	</nav>
+
+	<section id="home" name="home"></section>
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h1>BitGiver</h1>
+					<h3><font size="10" color="white" style="text-shadow: 2px 2px 2px #000000;">Donate Bitcoin and make a difference</font></h3>
+				</div>
+			</div><! --/row -->
+		</div><! --/container -->
+	</div><! --/headerwrap -->
+	
+	<section id="about" name="about"></section>
+	<div id="aboutwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 name">
+					<p>Jeremy Ney</p>
+					<div class="name-label"></div>
+				</div><! --/col-lg-4-->
+				<div class="col-lg-8 name-desc">
+					<h2>This is BitGiver:<br/>A blockchain developed program that will revolutionize charitable giving.</h2>
+					<div class="name-zig"></div>
+					
+					<div class="alt">
       <p>BitGiver ensures that charities, non-profits, education facilities, and other 501(c)(3) entities are receiving the maximum amount of their donations. <br><br>The current payments system is structured such that nearly any donation given via credit card charges a 3% fee to merchants on every transaction. According to <a href="http://givingusa.org/giving-usa-2015-press-release-giving-usa-americans-donated-an-estimated-358-38-billion-to-charity-in-2014-highest-total-in-reports-60-year-history/">Giving USA</a>, Americans gave $358.38 billion to charities across the world in 2014. Even if we assume that merely 10% of those donations occurred via credit cards, that is over $1 billion dollars that did not end up in the hands of those in need due to credit card transaction fees . According to the <a href="https://www.sharethemeal.org/en/values.html">United Nations World Food Programme</a>, this amount could have fed 5.9 million children per year. <br><br>BitGiver reduces transaction costs and maximizes the value we can give to the world. Peer-to-peer payments and distributed ledger systems allow for an efficient, transparent, and effective means of giving.</p>
-      <footer> <a href="#portfolio" class="button scrolly">Donate</a> </footer>
-    </div>
-  </section>
-  <section id="portfolio" class="two">
-    <div class="container">
-      <header>
-        <h2>Our Mission is Simple:</h2>
-      </header>
-      <p>Save the World.<br><br> Using public-key and private-key crypotechnology, we make it easier to send support from any country in the world. Click the partner organzation of your choice below and follow the next steps. </p>
-      <div class="row">
-        <div class="4u">
-          <article class="item"> <a href="https://www.coinbase.com/checkouts/7a8b44f0edd4a2c74e3c89e030392bc0" class="image full"><img src="images/pic02.jpg" alt=""></a>
-            <header>
-              <h3>Prevent and alleviate human suffering in the face of emergencies.</h3>
-            </header>
-          </article>
-          <article class="item"> <a href="https://www.coinbase.com/checkouts/11a5fc2ba40b3ec2fc726a4c9ddb20fb" class="image full"><img src="images/pic03.jpg" alt=""></a>
-            <header>
-              <h3>Support clean water projects across Kenya.</h3>
-            </header>
-          </article>
-        </div>
-        <div class="4u">
-          <article class="item"> <a href="https://www.coinbase.com/checkouts/c4d3e1f56de1f95c7c3a54c38f5ec4fa" class="image full"><img src="images/pic04.jpg" alt=""></a>
-            <header>
-              <h3>Protect human rights and fundamental freedoms across the world.</h3>
-            </header>
-          </article>
-          <article class="item"> <a href="https://www.coinbase.com/checkouts/010231dbdb70154989782597e7298b75" class="image full"><img src="images/pic05.jpg" alt=""></a>
-            <header>
-              <h3>Educate, inspire, and empower women in Afghanistan through coding and tech.</h3>
-            </header>
-          </article>
-        </div>
-        <div class="4u">
-          <article class="item"> <a href="https://www.coinbase.com/checkouts/e9a50be854d6473e70fedf364cd41039" class="image full"><img src="images/pic06.jpg" alt=""></a>
-            <header>
-              <h3>Donate to the largest charity in the world and mobilize communities.</h3>
-            </header>
-          </article>
-          <article class="item"> <a href="https://www.coinbase.com/checkouts/478896801e8e7e209d24fe36601ced88" class="image full"><img src="images/pic07.jpg" alt=""></a>
-            <header>
-              <h3>Help children receive school supplies and the medicine they need.</h3>
-            </header>
-          </article>
-        </div>
-      </div>
-    </div>
-<br><br><br>
-  <section id="about" class="three">
-    <div class="container small">
-      <header>
-        <h2>How it Works</h2>
-      </header>
-      <a href="#portfolio" class="image featured"><img src="images/pic09.jpg" alt=""></a>
-      <p>BitGiver locks in the USD:Bitcoin exchange rate for 15-minutes from the moment you select your charity. Your donation is then sent instantaneously over the blockchain and deposited in the BitGiver wallet, which is held at <a href="https://www.coinbase.com/">CoinBase</a> - the largest bitcoin wallet service in the world. After the initial 15-minute window, a new exchange rate will be posted. Each charity's donations are then automatically forwarded to the corresponding charity. <br><br> Charitable donations are tax exempt in the United States and in many other countries around the world. Because BitGiver locks in an exchange rate, we prepare a US Dollar invoice for you that can be submitted to receive your full write-off benefits. Make sure to provide your email address when checking out and the payment information will be delivered right to your inbox. 
-    </div>
-  </section>
-  <section id="FAQ" class="four">
-    <div class="container small">
-      <header>
-      <h2> Frequently Asked Questions</h2>
-    </header>
-    <a href="#portfolio" class="image featured"><img src="images/pic08.jpg" style="width:100%" alt=""></a>
+					</div>
 
-      <p><strong>WHAT IS BITCOIN?</strong> <br>Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen. From a user perspective, Bitcoin is pretty much like cash for the Internet. <br><br>
+				</div><! --/col-lg-8-->
+		
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /aboutwrap -->
+	
+	<! -- ABOUT SEPARATOR -->
+	<div class="sep about" data-stellar-background-ratio="0.5"></div>
+	
+	<! -- PORTFOLIO SECTION -->
+	<section id="portfolio" name="portfolio"></section>
+	<div id="portfoliowrap">
+		<div class="container">
+			<div class="row">
+				<h1>Donate Bitcoin</h1>
+				<h3> <center>Click the charities below to begin your donation process</center></h3>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="https://www.coinbase.com/checkouts/c4d3e1f56de1f95c7c3a54c38f5ec4fa"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="https://www.coinbase.com/checkouts/010231dbdb70154989782597e7298b75"><img class="img-responsive" src="assets/img/portfolio/port05.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="https://www.coinbase.com/checkouts/478896801e8e7e209d24fe36601ced88"><img class="img-responsive" src="assets/img/portfolio/port06.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+			</div><!-- /row -->
+	
+			<div class="row mt">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="https://www.coinbase.com/checkouts/e9a50be854d6473e70fedf364cd41039"><img class="img-responsive" src="assets/img/portfolio/port01.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="https://www.coinbase.com/checkouts/7a8b44f0edd4a2c74e3c89e030392bc0"><img class="img-responsive" src="assets/img/portfolio/port02.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+					<div class="project-wrapper">
+	                    <div class="project">
+	                        <div class="photo-wrapper">
+	                            <div class="photo">
+	                            	<a class="fancybox" href="https://www.coinbase.com/checkouts/11a5fc2ba40b3ec2fc726a4c9ddb20fb"><img class="img-responsive" src="assets/img/portfolio/port03.jpg" alt=""></a>
+	                            </div>
+	                            <div class="overlay"></div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div><!-- col-lg-4 -->
+			</div><!-- /row -->
+		</div><! --/container -->
+		<div class="container">
+			<div class="row mt centered">
+				<h1>Our Mission is Simple: <br><br> Save the World.</h1>
+				<div class="col-lg-4 proc">
+					<i class="fa fa-cogs"></i>
+					<h3>How it Works</h3>
+					<p>BitGiver locks in the USD:Bitcoin exchange rate for 15-minutes from the moment you select your charity. Your donation is then sent instantaneously over the blockchain and deposited in the BitGiver wallet, which is held at <a href="https://www.coinbase.com/">CoinBase</a> - the largest bitcoin wallet service in the world. After the initial 15-minute window, a new exchange rate will be posted. Each charity's donations are then automatically forwarded to the corresponding charity.</p>
+				</div>
+				<div class="col-lg-4 proc">
+					<i class="fa fa-th"></i>
+					<h3>Tax Benefits</h3>
+					<p>Charitable donations are tax exempt in the United States and in many other countries around the world. Because BitGiver locks in an exchange rate, we prepare a US Dollar invoice for you that can be submitted to receive your full write-off benefits. Make sure to provide your email address when checking out and the payment information will be delivered right to your inbox. </p>
+				</div>
+				<div class="col-lg-4 proc">
+					<i class="fa fa-heart"></i>
+					<h3>Partnerships</h3>
+					<p>BitGiver partners with charities and other public good organizations to ensure that no money is lost to the hands of middle men. BitGiver does not charge any transaction fees. </p>
+				</div>
+				
+			</div><! --/row -->
+		</div><! --/container -->
+	</div><! --/Portfoliowrap -->
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Um63OQz3bjo" style="width:100%" frameborder="0" allowfullscreen></iframe>
-        <br><br> <strong>HOW DOES BITCOIN WORK?</strong><br><br>From a user perspective, Bitcoin is nothing more than a mobile app or computer program that provides a personal Bitcoin wallet and allows a user to send and receive bitcoins with them. This is how Bitcoin works for most users.<br><br>Behind the scenes, the Bitcoin network is sharing a public ledger called the "block chain". This ledger contains every transaction ever processed, allowing a user's computer to verify the validity of each transaction. The authenticity of each transaction is protected by digital signatures corresponding to the sending addresses, allowing all users to have full control over sending bitcoins from their own Bitcoin addresses.
+	<! -- PORTFOLIO SEPARATOR -->
+	<div class="sep portfolio" data-stellar-background-ratio="0.5"></div>
+	
+	
+	<! -- SERVICE SECTION -->
+	<section id="services" name="services"></section>
+	<div id="servicewrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8-offset-2 centered">
+					<h1>Frequently Asked Questions</h1>
+					<h3>If you don't understand bitcoin or the blockchain - fear not! We have you covered. </h3>
+					<p>BitGiver can help you make a difference.</p>
+				</div><!-- /col-lg-8 -->
+			</div><! --/row -->
+			
+			<div class="row mt">
+				<div class="col-lg-3 service">
+					<i class="fa fa-bitcoin"></i><p>What is Bitcoin?<br/><small>FAQ</small></p>
+					<p class="text">Bitcoin is a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen. From a user perspective, Bitcoin is pretty much like cash for the Internet.</p>
+				</div>
+				<div class="col-lg-3 service">
+					<i class="fa fa-globe"></i><p>How Does Bitcoin Work?<br/><small>FAQ</small></p>
+					<p class="text">Bitcoin is nothing more than a mobile app or computer program that provides a personal Bitcoin wallet and allows a user to send and receive bitcoins with them. This is how Bitcoin works for most users.</p>
+				</div>
+				<div class="col-lg-3 service">
+					<i class="fa fa-chain"></i><p>What is a Blockchain?<br/><small>FAQ</small></p>
+					<p class="text">A blockchain is an append-only database of transactions which has two key elements: 1) a shared, replicated ledger, and 2) a “consensus algorithm”. In a blockchain, each transaction must reference a balance received from a previous transaction and must be cryptographically signed by the legal approver of the transaction. The linked transactions form an exact chain of title over time.</p>
+				</div>
+				<div class="col-lg-3 service">
+					<i class="fa fa-group"></i><p>What is a distributed ledger?<br/><small>FAQ</small></p>
+					<p class="text">A distributed ledger is a digital record of who-owns-what. Unlike traditional database technology, there is no central administrator of the ledger, nor is there a central data store. A blockchain is just one type of distributed ledger - not all distributed ledgers necessarily employ blocks or chain transactions.</p>
+				</div>
+			</div><! --/row -->
+		</div><! --/container -->
+	</div><! --/servicewrap -->
+	
+	<div id="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 mt">
+				
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+					    <div class="item active mb centered">
+					      <h3>Jeremy Ney</h3>
+					      <p>I have a passion for an open-source world and have been working to fight the world's fights. <br><br> If you are interested in having your organization listed on BitGiver, please contact us below.</p>
+					      <p><img class="img-circle" src="assets/img/pic-t1.jpg" width="80"></p>
+					    </div>
 
-        <br><br><strong>WHAT IS A BLOCKCHAIN OR DISTRIBUTED LEDGER?</strong><br><br> A blockchain is an append-only database of transactions which has two key elements: 1) a shared, replicated ledger, and 2) a distributed database synchronizing mechanism known as a “consensus algorithm”. In a blockchain, each transaction must reference a balance received from a previous transaction and must be cryptographically signed by the legal approver of the transaction. The linked transactions form an exact chain of title over time. A blockchain is just one type of distributed ledger, not all distributed ledgers necessarily employ blocks or chain transactions.
+					    <div class="item mb centered">
+					      <h3>Coin Base</h3>
+					      <p>Coinbase is a bitcoin wallet and exchange company headquartered in San Francisco California. It operates exchanges between bitcoin and fiat currencies in 32 countries, and bitcoin transactions and storage in 190 countries worldwide. Coin base has 3.6 million users, 5.4 million wallets, and over 8,000 developer apps.</p>
+					      <p><img class="img-circle" src="assets/img/pic-t2.jpg" width="80"></p>
+					    </div>
 
-        <br><br> For more information, go to <a href="https://bitcoin.org/en/faq">www.bitcoin.org/FAQ</a></p>
-    </div>
-  </section>
-  <section id="contact" class="five">
-    <div class="container small">
-      <header>
-        <h2>Contact</h2>
-      </header>
-      <p>I have a passion for an open-source world and have been working to fight the world's fights. <br><br> If you are interested in having your organization listed on BitGiver, please contact us below. <h3>Give a Bit.</h3></p>
-      <form method="post" action="mailto:jeremybney@gmail.com">
-        <div class="row half">
-          <div class="6u">
-            <input type="text" class="text" name="name" placeholder="Name">
-          </div>
-          <div class="6u">
-            <input type="text" class="text" name="email" placeholder="Email">
-          </div>
-        </div>
-        <div class="row half">
-          <div class="12u">
-            <textarea name="message" placeholder="Message"></textarea>
-          </div>
-        </div>
-        <div class="row">
-          <div class="12u"> 
-            <li><a href="mailto:jeremybney@gmail.com" class="button submit">Send Message</a></li>
-          </div>  
-        </div>
-      </form>
-    </div>
-  </section>
-</div>
-<div id="footer">
-  <div class="copyright">
-    <p>&copy; 2016 Jeremy Ney. All rights reserved.</p>
-      <li>Policies: <a href="Assets/Operating Agreement.pdf">Operating Agreement</a></li><br>
-    <ul class="menu">
-      <li>About our partners: <a href="https://www.unitedway.org/">United Way</a></li> 
-      <li><a href="http://www.redcross.org/mo2">American Red Cross</a></li>
-      <li><a href="https://thewaterproject.org/">The Water Project</a></li>
-      <li><a href="https://humanrightsfoundation.org/">Human Rights Foundation</a></li>
-      <li><a href="https://www.savethechildren.net/">Save the Children</a></li>
-      <li><a href="http://codetoinspire.org/">Code to Inspire</a></li>
-    </ul>
-  </div>
-</div>
-</body>
+					    <div class="item mb centered">
+					      <h3>Operating Agreement</h3>
+					      <p>BitGiver is a servide provider that partners with charities and other public good entities. BitGiver is not itself a charity or 501(c)(3) entity. Click <a href="assets/Operating Agreement.pdf">here</a> to view the operating terms and agreement. </p>
+					      <p><img class="img-circle" src="assets/img/pic-t3.jpg" width="80"></p>
+					    </div>
+
+					  </div>
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					  </ol>
+					</div>
+					  
+				</div><! --/col-lg-8 -->
+			</div><! --/row -->
+		</div><! --/container -->
+	</div><! --/testimonials -->
+	
+	<! -- SERVICE SECTION -->
+	<section id="contact" name="contact"></section>
+	<! -- CONTACT SEPARATOR -->
+	<div class="sep contact" data-stellar-background-ratio="0.5"></div>
+	
+	<div id="contactwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<p>CONTACT ME</p>
+					<p>I was born and raised in Brooklyn, NY. I have focused on partnering with charities and organizations that I care deeply about and believe in their mission. If you are interested in being listed on BitGiver, please fill out the contact sheet. </p>
+					<p>
+						<small>553 2nd Street<br/>
+						Brooklyn, NY 11215<br/>
+						USA.</small>
+					</p>
+					<p>
+						<small>Tel. 917-434-5553<br/>
+						Mail: <a href="mailto:bitgiver.xyz@gmail.com">BitGiver.xyz@gmail.com<br/>
+						About me: <a href="http://www.jeremybney.com/">Jeremy Ney</a>
+					</p>
+			
+				</div>
+				
+				<div class="col-lg-6">
+					<form role="form">
+					  <div class="form-group">
+					    <label for="exampleInputName1">Your Name</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter name">
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+					    <label for="exampleInputText1">Message</label>
+					    <textarea class="form-control" rows="3"></textarea>
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+			
+			</div><! --/row -->
+		</div><!-- /container -->
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/jquery.stellar.min.js"></script>
+	<script src="assets/js/fancybox/jquery.fancybox.js"></script>    
+	<script src="assets/js/main.js"></script>
+		<script>
+		$(function(){
+			$.stellar({
+				horizontalScrolling: false,
+				verticalOffset: 40
+			});
+		});
+		</script>
+		
+		<script type="text/javascript">
+      $(function() {
+        //    fancybox
+          jQuery(".fancybox").fancybox();
+      });
+	   </script>
+
+  </body>
 </html>
