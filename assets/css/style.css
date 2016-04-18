@@ -325,6 +325,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-position: 50% 0;
 	background-repeat: no-repeat;
 	height: 450px;
+	max-width: 100%;
 	position: relative;
 }
 .about {
